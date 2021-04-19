@@ -50,7 +50,6 @@ var choices3Li1 = document.createElement("li");
 var choices3Li2 = document.createElement("li");
 var choices3Li3 = document.createElement("li");
 var choices3Li4 = document.createElement("li");
-console.log("CHOICES#" + choices3Li4)
         //ANSWER/
 var answer3 = document.createElement("p");
 
