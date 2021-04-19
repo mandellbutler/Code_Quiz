@@ -5,6 +5,13 @@
     font-size: 17px;
 }
 
+.statbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
 .hide {
     display:none;
 }
+
