@@ -1,14 +1,22 @@
- //=============================================================/BODY/
+//  //=============================================================/BODY/
 
-var body = document.body;
+// var body = document.body;
 
- //=============================================================/HEADER/
+//  //=============================================================/HEADER/
+// //CREATE
+// var headerEl = document.createElement("header");
+// var highscoresEl = document.createElement("div");
+// var timerEl = document.createElement("div");
+// //BUILD
+// highscoresEl.textContent = "Highscores"
+// console.log(highscoresEl)
 
-var headerEl = document.createElement("header");
-var highscoresEl = document.createElement("div");
-var timerEl = document.createElement("div");
+// //PLACE
+// document.appendChild(headerEl)
+// headerEl.appendChild(highscoresEl)
+// console.log(highscoresEl)
 
- //=============================================================/MAIN/
+//=============================================================/MAIN/
 
 var containersEl = document.createElement("main");
 
