@@ -1,70 +1,96 @@
-//==================================CREATE==================================  .createElement("elementname")
-
-//*********************************/BODY/
+ //=============================================================/BODY/
 
 var body = document.body;
 
-//*******************************/HEADER/
+ //=============================================================/HEADER/
 
 var headerEl = document.createElement("header");
 var highscoresEl = document.createElement("div");
 var timerEl = document.createElement("div");
 
-//********************************/MAIN/
+ //=============================================================/MAIN/
 
 var containersEl = document.createElement("main");
 
-//****************/START SECTION/
+// //=========================================/START SECTION/
 var startContainerEl = document.createElement("section");
 var h1El = document.createElement("h1");
 var greetEl = document.createElement("p")
 
-//***************/GAME SECTION/
+ //===========================================/GAME SECTION/
 var gameContainerEl = document.createElement("section");
 
-//QUESTIONS LIST/
-var questionsEl = document.createElement("div");
-var questListEl = document.createElement("ol");
+        //QUESTION 1/
+var questionEl = document.createElement("div");
+var choicesListEl = document.createElement("ol");
+        //LIST ITEMS/
+var choicesLi1 = document.createElement("li");
+var choicesLi2 = document.createElement("li");
+var choicesLi3 = document.createElement("li");
+var choicesLi4 = document.createElement("li");
+        //ANSWER/
+var answer1 = document.createElement("p");
 
-//LIST ITEMS/
-var questLi1 = document.createElement("li");
-var questLi2 = document.createElement("li");
-var questLi3 = document.createElement("li");
-var questLi4 = document.createElement("li");
-var questLi5 = document.createElement("li");
+        //QUESTION 2/
+var question2El = document.createElement("div");
+var choices2ListEl = document.createElement("ol");
+        //LIST ITEMS/
+var choices2Li1 = document.createElement("li");
+var choices2Li2 = document.createElement("li");
+var choices2Li3 = document.createElement("li");
+var choices2Li4 = document.createElement("li");
+        //ANSWER/
+var answer2 = document.createElement("p");
 
-//ANSWER LIST/
-var answersChoicesEl = document.createElement("div");
-var answerChoicesListEl = document.createElement("ol");
+        //QUESTION 3/
+var questionEl = document.createElement("div");
+var choicesListEl = document.createElement("ol");
+        //LIST ITEMS/
+var choices3Li1 = document.createElement("li");
+var choices3Li2 = document.createElement("li");
+var choices3Li3 = document.createElement("li");
+var choices3Li4 = document.createElement("li");
+console.log("CHOICES#" + choices3Li4)
+        //ANSWER/
+var answer3 = document.createElement("p");
 
-//LIST ITEMS/
-var answerChoicesLi1 = document.createElement("li");
-var answerChoicesLi2 = document.createElement("li");
-var answerChoicesLi3 = document.createElement("li");
-var answerChoicesLi4 = document.createElement("li");
-var answerChoicesLi5 = document.createElement("li");
+        //QUESTION 4/
+var question4El = document.createElement("div");
+var choices4ListEl = document.createElement("ol");
+        //LIST ITEMS/
+var choices4Li1 = document.createElement("li");
+var choices4Li2 = document.createElement("li");
+var choices4Li3 = document.createElement("li");
+var choices4Li4 = document.createElement("li");
+        //ANSWER/
+var answer4 = document.createElement("p");
 
-//CORRECT ANSWERS/
-var correctAnswerEl = document.createElement("div");
-var correctAnswerListEl = document.createElement("ol");
 
-//LIST ITEMS/
-var correctAnswerLi1 = document.createElement("li");
-var correctAnswerLi2 = document.createElement("li");
-var correctAnswerLi3 = document.createElement("li");
-var correctAnswerLi4 = document.createElement("li");
-var correctAnswerLi5 = document.createElement("li");
+        //QUESTION 5/
+var question5El = document.createElement("div");
+var choicesListEl = document.createElement("ol");
+        //LIST ITEMS/
+var choices5Li1 = document.createElement("li");
+var choices5Li2 = document.createElement("li");
+var choices5Li3 = document.createElement("li");
+var choices5Li4 = document.createElement("li");
+        //ANSWER/
+var answer5 = document.createElement("p");
 
-//***********/INITIALS SECTION/
+
+ //=========================================/INITIALS SECTION/
 var initialContainerEl = document.createElement("section");
 var intitialH2El = document.createElement("h2");
 var initialMsg = document.createElement("p");
 var initialForm = document.createElement("form");
 
-//********/HIGHSCORES SECTION/
+ //======================================/HIGHSCORES SECTION/
 var highscoreContainerEl = document.createElement("section");
 var highscoreH2El = document.createElement("h2");
 var highscoreForm = document.createElement("form");
+
+
+
 
 
 
