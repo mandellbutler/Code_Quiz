@@ -3,38 +3,28 @@
 //*********************************/BODY/
 
 var body = document.body;
-var h1El = document.createElement("h1");
-console.log("BODY:" + body)
-console.log("H1:" + h1El)
 
 //*******************************/HEADER/
 
 var headerEl = document.createElement("header");
-console.log("HEADER:" + headerEl)
 var highscoresEl = document.createElement("div");
-console.log("HIGHSCORES:" + highscoresEl);
 var timerEl = document.createElement("div");
-console.log("TIMER:" + timerEl);
 
 //********************************/MAIN/
 
 var containersEl = document.createElement("main");
-console.log("CONTIANERS:" + containersEl);
 
 //****************/START SECTION/
 var startContainerEl = document.createElement("section");
-console.log("START:" + startContainerEl);
+var h1El = document.createElement("h1");
+var greetEl = document.createElement("p")
 
 //***************/GAME SECTION/
 var gameContainerEl = document.createElement("section");
-console.log("GAME:" + gameContainerEl);
-
 
 //QUESTIONS LIST/
 var questionsEl = document.createElement("div");
-console.log("QUESTIONS:" + questionsEl);
 var questListEl = document.createElement("ol");
-console.log("Q-LIST:" +questListEl);
 
 //LIST ITEMS/
 var questLi1 = document.createElement("li");
@@ -42,14 +32,10 @@ var questLi2 = document.createElement("li");
 var questLi3 = document.createElement("li");
 var questLi4 = document.createElement("li");
 var questLi5 = document.createElement("li");
-console.log("Q-ITEMS" + questLi1)
 
 //ANSWER LIST/
-
 var answersChoicesEl = document.createElement("div");
-console.log("A-CHOICES:" + answersChoicesEl);
 var answerChoicesListEl = document.createElement("ol");
-console.log("A-LIST:" + answerChoicesListEl);
 
 //LIST ITEMS/
 var answerChoicesLi1 = document.createElement("li");
@@ -57,14 +43,10 @@ var answerChoicesLi2 = document.createElement("li");
 var answerChoicesLi3 = document.createElement("li");
 var answerChoicesLi4 = document.createElement("li");
 var answerChoicesLi5 = document.createElement("li");
-console.log("A-ITEMS:" + answerChoicesLi1)
 
 //CORRECT ANSWERS/
-
 var correctAnswerEl = document.createElement("div");
-console.log("CORRECT:" + correctAnswerEl);
 var correctAnswerListEl = document.createElement("ol");
-console.log("COR-LIST:" + correctAnswerListEl);
 
 //LIST ITEMS/
 var correctAnswerLi1 = document.createElement("li");
@@ -72,11 +54,17 @@ var correctAnswerLi2 = document.createElement("li");
 var correctAnswerLi3 = document.createElement("li");
 var correctAnswerLi4 = document.createElement("li");
 var correctAnswerLi5 = document.createElement("li");
-console.log("COR-ITEMS:" + correctAnswerLi1)
-
 
 //***********/INITIALS SECTION/
+var initialContainerEl = document.createElement("section");
+var intitialH2El = document.createElement("h2");
+var initialMsg = document.createElement("p");
+var initialForm = document.createElement("form");
 
+//********/HIGHSCORES SECTION/
+var highscoreContainerEl = document.createElement("section");
+var highscoreH2El = document.createElement("h2");
+var highscoreForm = document.createElement("form");
 
 
 
