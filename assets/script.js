@@ -1,56 +1,89 @@
-
 //DEPENDENICES
+//highscores link
+var highscores = document.getElementById("highscores");
+//countdown timer
+var timer = document.getElementById("timer");
+//question & answer choice cards
+var questionCards = document.getElementById("gameContainer");
+//card that gives the user the ability to enter initials
+var initialsCard = document.getElementById("initialsContainer");
+//highscore card
+var scoreCard = document.getElementById("scoresContainer");
 
-var questions = [
-        {
-                question: "What does DOM stand for?"  
-                a: "Document Object Method."
-                b: "Donuts Over Money."
-                c: "Don't Operate Machinery."
-                d: "Domain Over-ride Methods."
-                answer: "a"
-        },
-        {
-                question: "What is an Array?"  
-                a: "A type of laser beam that is used for severe acne treatment."
-                b: "A data structure that contains a group of elements, each identified by at least one array index or key."
-                c: "A container for storing data values."
-                d: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
-                answer: "b"
-        },
-        {
-                question: "Function paremeters are enclosed by which of the following?:"  
-                a: "{}"
-                b: "[]"
-                c: "++"
-                d: "()"
-                answer: "d"
-        },
-        {
-                question: "What is a String?"  
-                a: "I piece of fabric, often used to bind things together using knots."
-                b: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
-                c: "A container for storing data values."
-                d: "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
-                answer: "b"
-        },
-        {
-                question: "Who invented Javascript?"  
-                a: "James Weldon Johnson"
-                b: "Chris Beard"
-                c: "Brendan Eich"
-                d: "Yan Zhu"
-                answer: "c"
-        },
+
+
+//STARTING DATA
+
+//Questions stored as an object with answers as key/value pairs: 
+// var questions = [
+//         {
+//                 question: "What does DOM stand for?"  
+//                 a: "Document Object Method."
+//                 b: "Donuts Over Money."
+//                 c: "Don't Operate Machinery."
+//                 d: "Domain Over-ride Methods."
+//                 answer: "a"
+//         },
+//         {
+//                 question: "What is an Array?"  
+//                 a: "A type of laser beam that is used for severe acne treatment."
+//                 b: "A data structure that contains a group of elements, each identified by at least one array index or key."
+//                 c: "A container for storing data values."
+//                 d: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+//                 answer: "b"
+//         },
+//         {
+//                 question: "Function paremeters are enclosed by which of the following?:"  
+//                 a: "{}"
+//                 b: "[]"
+//                 c: "++"
+//                 d: "()"
+//                 answer: "d"
+//         },
+//         {
+//                 question: "What is a String?"  
+//                 a: "I piece of fabric, often used to bind things together using knots."
+//                 b: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+//                 c: "A container for storing data values."
+//                 d: "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+//                 answer: "b"
+//         },
+//         {
+//                 question: "Who invented Javascript?"  
+//                 a: "James Weldon Johnson"
+//                 b: "Chris Beard"
+//                 c: "Brendan Eich"
+//                 d: "Yan Zhu"
+//                 answer: "c"
+//         },
         
-]
+// ]
+// console.log(questions)
+
 
 //STARTING DATA
 
 
 //USER INTERACTIONS
+var buttons = document.querySelector(".buttons");
+var startButton = document.getElementById("startButton");
+console.log(startButton)
 
+//Button clicks
+buttons.addEventListener("click", function(event) {
+        var element = event.target;
+        if (element.matches(".buttons")) {
+                console.log("i clicked a button");
+        }
+})
 
+//start button
+startButton.addEventListener("click", function(event) {
+        var element = event.target;
+        if (element.matches("#startButton")) {
+                console.log("i clicked the start button");
+        }
+})
 // INITIALIZATION
 
 
