@@ -38,7 +38,11 @@ var questions = [
                 answer: "1"
         },
         {
+<<<<<<< HEAD
                 question: "What is an Array?",
+=======
+                question: "What is an Array?",  
+>>>>>>> workingbranch
                 1: "A type of laser beam that is used for severe acne treatment.",
                 2: "A data structure that contains a group of elements, each identified by at least one array index or key.",
                 3: "A container for storing data values.",
@@ -46,7 +50,11 @@ var questions = [
                 answer: "2"
         },
         {
+<<<<<<< HEAD
                 question: "Function paremeters are enclosed by which of the following?:",
+=======
+                question: "Function paremeters are enclosed by which of the following?:",  
+>>>>>>> workingbranch
                 1: "{}",
                 2: "[]",
                 3: "++",
@@ -54,7 +62,11 @@ var questions = [
                 answer: "4"
         },
         {
+<<<<<<< HEAD
                 question: "What is a String?",
+=======
+                question: "What is a String?",  
+>>>>>>> workingbranch
                 1: "I piece of fabric, often used to bind things together using knots.",
                 2: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
                 3: "A container for storing data values.",
@@ -85,7 +97,8 @@ var timeLeft = 90;
 
 //start quiz
 function startQuiz() {
-        console.log("We bout to start")
+        //hide start container
+        document.getElementById("startContainer").classList.add("hide")
         //timer starts
         startTimer();
 }
@@ -133,6 +146,7 @@ function setScoreKeeper() {
 
 
 //Button clicks
+//answer buttons
 // buttons.addEventListener("click", function(event) {
 //         var element = event.target;
 //         if (element.matches(".buttons")) {
@@ -156,121 +170,6 @@ startButton.addEventListener("click", function(event) {
 
 //Start Container appears upon page loading
 
-
-
-
-
-
-//  //=============================================================/BODY/
-
-// var body = document.body;
-
-//  //=============================================================/HEADER/
-// //CREATE
-// var headerEl = document.createElement("header");
-// var highscoresEl = document.createElement("div");
-// var timerEl = document.createElement("div");
-// //BUILD
-// highscoresEl.textContent = "Highscores"
-// console.log(highscoresEl)
-
-// //PLACE
-// document.appendChild(headerEl)
-// headerEl.appendChild(highscoresEl)
-// console.log(highscoresEl)
-
-//=============================================================/MAIN/
-
-// var containersEl = document.createElement("main");
-
-// // //=========================================/START SECTION/
-// var startContainerEl = document.createElement("section");
-// var h1El = document.createElement("h1");
-// var greetEl = document.createElement("p")
-
-//  //===========================================/GAME SECTION/
-// var gameContainerEl = document.createElement("section");
-
-//         //QUESTION 1/
-// var questionEl = document.createElement("div");
-// var choicesListEl = document.createElement("ol");
-//         //LIST ITEMS/
-// var choicesLi1 = document.createElement("li");
-// var choicesLi2 = document.createElement("li");
-// var choicesLi3 = document.createElement("li");
-// var choicesLi4 = document.createElement("li");
-//         //ANSWER/
-// var answer1 = document.createElement("p");
-
-//         //QUESTION 2/
-// var question2El = document.createElement("div");
-// var choices2ListEl = document.createElement("ol");
-//         //LIST ITEMS/
-// var choices2Li1 = document.createElement("li");
-// var choices2Li2 = document.createElement("li");
-// var choices2Li3 = document.createElement("li");
-// var choices2Li4 = document.createElement("li");
-//         //ANSWER/
-// var answer2 = document.createElement("p");
-
-//         //QUESTION 3/
-// var questionEl = document.createElement("div");
-// var choicesListEl = document.createElement("ol");
-//         //LIST ITEMS/
-// var choices3Li1 = document.createElement("li");
-// var choices3Li2 = document.createElement("li");
-// var choices3Li3 = document.createElement("li");
-// var choices3Li4 = document.createElement("li");
-//         //ANSWER/
-// var answer3 = document.createElement("p");
-
-//         //QUESTION 4/
-// var question4El = document.createElement("div");
-// var choices4ListEl = document.createElement("ol");
-//         //LIST ITEMS/
-// var choices4Li1 = document.createElement("li");
-// var choices4Li2 = document.createElement("li");
-// var choices4Li3 = document.createElement("li");
-// var choices4Li4 = document.createElement("li");
-//         //ANSWER/
-// var answer4 = document.createElement("p");
-
-
-//         //QUESTION 5/
-// var question5El = document.createElement("div");
-// var choicesListEl = document.createElement("ol");
-//         //LIST ITEMS/
-// var choices5Li1 = document.createElement("li");
-// var choices5Li2 = document.createElement("li");
-// var choices5Li3 = document.createElement("li");
-// var choices5Li4 = document.createElement("li");
-//         //ANSWER/
-// var answer5 = document.createElement("p");
-
-
-//  //=========================================/INITIALS SECTION/
-// var initialContainerEl = document.createElement("section");
-// var intitialH2El = document.createElement("h2");
-// var initialMsg = document.createElement("p");
-// var initialForm = document.createElement("form");
-
-//  //======================================/HIGHSCORES SECTION/
-// var highscoreContainerEl = document.createElement("section");
-// var highscoreH2El = document.createElement("h2");
-// var highscoreForm = document.createElement("form");
-
-
-
-
-
-
-
-
-
-//BUILD   name.textContent = ("text")
-
-
-//PLACE   destination.appendChild(name)
 
 // INITIALIZE
 // questionObjects as collection of objects containing a question, an answer, and possible choices
