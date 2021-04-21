@@ -1,4 +1,5 @@
-//DEPENDENICES
+//=====================================================================DEPENDENICES
+
 //highscores link
 var highscores = document.getElementById("highscores");
 //countdown timer
@@ -10,9 +11,21 @@ var initialsCard = document.getElementById("initialsContainer");
 //highscore card
 var scoreCard = document.getElementById("scoresContainer");
 
+                //Buttons
+//start button
+var startButton = document.getElementById("startButton");
+
+//answerButtons
+var buttons = document.querySelector(".buttons");
+
+//submit button
+
+//clear records button
 
 
-//STARTING DATA
+
+
+//=====================================================================STARTING DATA
 
 //Questions stored as an object with answers as key/value pairs: 
 // var questions = [
@@ -61,21 +74,80 @@ var scoreCard = document.getElementById("scoresContainer");
 // console.log(questions)
 
 
-//STARTING DATA
+//currentQuestionIndex
+//keeps track of questions that have been answered
+var currentQuestionIndex = 0;
+//currentQuestionObject
+
+var timeLeft = 90;
+
+//=====================================================================FUNCTIONS
+
+//start quiz
+function startQuiz() {
+        console.log("We bout to start")
+        //timer starts
+        startTimer();
+}
+
+function startTimer() {
+        timer.textContent = timeLeft;
+        var timeInterval = setInterval(function() {
+            timeLeft--;
+            if (timeLeft > 0) {
+                timer.textContent = timeLeft;
+            } else {
+                clearInterval(timeInterval);
+                timer.textContent = 0;
+                timeLeft = 90;
+            }
+        }, 1000);
+    }
+
+// function startTimer() {
+//         console.log("timer has started");
+//         //make sure time starts from beginning
+//         timeLeft = 90;
+//         var timerInterval = setInterval(function() {
+//                 //subtract 1 from the time left
+//                 timeLeft--;
+//                 //update the time in display
+//                 timer.textContent = timeLeft;
+//                 //timer reaches zero
+//                 //stop the timer
+//                 //stop the quiz
+//         }, 1000);
+// }
+//render the questions/answers to the card
+function renderQuestions(index) {
+        //clear off the start card
+        
+        //create question section
+        //add content from the question object array
+        //place it in questions card
+
+        //create answer choices as buttons
+        //place in questions card
+
+}
+//displays hidden question/answer cards
+
+//score card function
+function setScoreKeeper() {
+        countEl.textContent = count;
+      }
 
 
-//USER INTERACTIONS
-var buttons = document.querySelector(".buttons");
-var startButton = document.getElementById("startButton");
-console.log(startButton)
+//=====================================================================USER INTERACTIONS
+
 
 //Button clicks
-buttons.addEventListener("click", function(event) {
-        var element = event.target;
-        if (element.matches(".buttons")) {
-                console.log("i clicked a button");
-        }
-})
+// buttons.addEventListener("click", function(event) {
+//         var element = event.target;
+//         if (element.matches(".buttons")) {
+//                 console.log("i clicked a button");
+//         }
+// })
 
 //start button
 startButton.addEventListener("click", function(event) {
@@ -84,18 +156,18 @@ startButton.addEventListener("click", function(event) {
                 console.log("i clicked the start button");
         }
 })
-// INITIALIZATION
+
+//Moving to the next question hiding/unhiding the question cards
+// unhide.addEventListener("click", function() {
+//         console.log("Hello")     
+//      })
+//======================================================================INITIALIZATION
+
+//Start Container appears upon page loading
 
 
-//Hide and unhide the question cards
-unhide.addEventListener("click", function() {
-   console.log("Hello")     
-})
 
-//score card function
-function setScoreKeeper() {
-        countEl.textContent = count;
-      }
+
 
 
 //  //=============================================================/BODY/
