@@ -154,7 +154,7 @@ startButton.addEventListener("click", function(event) {
         var element = event.target;
         if (element.matches("#startButton")) {
                 console.log("i clicked the start button");
-        }
+        }startQuiz();
 })
 
 //Moving to the next question hiding/unhiding the question cards
