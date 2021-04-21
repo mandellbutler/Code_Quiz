@@ -1,18 +1,21 @@
 * {
     box-shadow: border-box;
-    border: 1px solid red;
     line-height: 30px;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 #statbar {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    padding: 0px 15px;
+}
+
+h1, h2 {
+    font-size: 2em;
 }
 
 .hide {
-    display:none;
+    display: none;
 }
 
 .unhide {
@@ -30,12 +33,18 @@
     height: 45vh;
     margin: 0 auto;
     padding: 60px 60px;
-    border: 1px solid red;
 }
 
 .buttons {
     margin-top: 10px;
     background-color: #3e1478;
     color: #ffffff;
-    font-size: 85%;
+    font-size: 70%;
+    transition-duration: .4s;
+    border-radius: 17%;
+}
+
+.buttons:hover {
+    opacity: .6;
+    box-shadow: 3px;
 }

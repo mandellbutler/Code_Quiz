@@ -16,13 +16,21 @@
     <main class="container">
         <section id="startContainer"> 
             <h1>Code Quiz Challenge!</h1>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, accusantium ducimus dolor quas, alias ullam eaque possimus, quia expedita dicta reprehenderit rem quidem sapiente. Ipsa ratione assumenda iusto temporibus fuga?</div>
+            <div>Are you an aspiring web developer who would like to put their Javascript skills to the test? Take the Code Quiz Challenge! Earn points with each correct answer, but beware! With each wrong answer, you will lose time off the clock! Complete the quiz before the timer runs out and you're done. Be sure to record your intials, at the end, and see how you compare to other coders' highscores. Good Luck!</div>
             <button id="startButton" class="buttons">Start Quiz!</button>
         </section>
 
         <section id="gameContainer" class="hide"> Game </section>
 
-        <section id="initialsContainer" class="hide">Get Initials </section>
+        <section id="initialsContainer" class="hide">
+            <h2>All Done!</h2>
+            <p>Your score is</p>
+            <form action="/action_page.php">
+                <label for="initials">Enter Initials:</label>
+                <input type="text" id="initials" name="initials">
+                <input class="buttons" type="submit" value="Submit">
+            </form>
+        </section>
 
         <section id="scoresContainer" class="hide"> Scores </section>
     </main>

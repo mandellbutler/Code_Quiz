@@ -28,50 +28,50 @@ var buttons = document.querySelector(".buttons");
 //=====================================================================STARTING DATA
 
 //Questions stored as an object with answers as key/value pairs: 
-// var questions = [
-//         {
-//                 question: "What does DOM stand for?"  
-//                 a: "Document Object Method."
-//                 b: "Donuts Over Money."
-//                 c: "Don't Operate Machinery."
-//                 d: "Domain Over-ride Methods."
-//                 answer: "a"
-//         },
-//         {
-//                 question: "What is an Array?"  
-//                 a: "A type of laser beam that is used for severe acne treatment."
-//                 b: "A data structure that contains a group of elements, each identified by at least one array index or key."
-//                 c: "A container for storing data values."
-//                 d: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
-//                 answer: "b"
-//         },
-//         {
-//                 question: "Function paremeters are enclosed by which of the following?:"  
-//                 a: "{}"
-//                 b: "[]"
-//                 c: "++"
-//                 d: "()"
-//                 answer: "d"
-//         },
-//         {
-//                 question: "What is a String?"  
-//                 a: "I piece of fabric, often used to bind things together using knots."
-//                 b: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
-//                 c: "A container for storing data values."
-//                 d: "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
-//                 answer: "b"
-//         },
-//         {
-//                 question: "Who invented Javascript?"  
-//                 a: "James Weldon Johnson"
-//                 b: "Chris Beard"
-//                 c: "Brendan Eich"
-//                 d: "Yan Zhu"
-//                 answer: "c"
-//         },
+var questions = [
+        {
+                question: "What does DOM stand for?"  
+                1: "Document Object Method."
+                2: "Donuts Over Money."
+                3: "Don't Operate Machinery."
+                4: "Domain Over-ride Methods."
+                answer: "1"
+        },
+        {
+                question: "What is an Array?"  
+                1: "A type of laser beam that is used for severe acne treatment."
+                2: "A data structure that contains a group of elements, each identified by at least one array index or key."
+                3: "A container for storing data values."
+                4: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+                answer: "2"
+        },
+        {
+                question: "Function paremeters are enclosed by which of the following?:"  
+                1: "{}"
+                2: "[]"
+                3: "++"
+                4: "()"
+                answer: "4"
+        },
+        {
+                question: "What is a String?"  
+                1: "I piece of fabric, often used to bind things together using knots."
+                2: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+                3: "A container for storing data values."
+                4: "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+                answer: "2"
+        },
+        {
+                question: "Who invented Javascript?"  
+                1: "James Weldon Johnson"
+                2: "Chris Beard"
+                3: "Brendan Eich"
+                4: "Yan Zhu"
+                answer: "3"
+        },
         
-// ]
-// console.log(questions)
+]
+console.log(questions)
 
 
 //currentQuestionIndex
@@ -93,31 +93,22 @@ function startQuiz() {
 function startTimer() {
         timer.textContent = timeLeft;
         var timeInterval = setInterval(function() {
+        //subtract 1 from the time left
             timeLeft--;
             if (timeLeft > 0) {
+                //update the time in display
                 timer.textContent = timeLeft;
             } else {
                 clearInterval(timeInterval);
+                //timer reaches zero
                 timer.textContent = 0;
                 timeLeft = 90;
+                //stop the timer
+               //stop the quiz
             }
         }, 1000);
     }
 
-// function startTimer() {
-//         console.log("timer has started");
-//         //make sure time starts from beginning
-//         timeLeft = 90;
-//         var timerInterval = setInterval(function() {
-//                 //subtract 1 from the time left
-//                 timeLeft--;
-//                 //update the time in display
-//                 timer.textContent = timeLeft;
-//                 //timer reaches zero
-//                 //stop the timer
-//                 //stop the quiz
-//         }, 1000);
-// }
 //render the questions/answers to the card
 function renderQuestions(index) {
         //clear off the start card
