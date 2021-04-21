@@ -30,43 +30,43 @@ var buttons = document.querySelector(".buttons");
 //Questions stored as an object with answers as key/value pairs: 
 var questions = [
         {
-                question: "What does DOM stand for?"  
-                1: "Document Object Method."
-                2: "Donuts Over Money."
-                3: "Don't Operate Machinery."
-                4: "Domain Over-ride Methods."
+                question: "What does DOM stand for?",  
+                1: "Document Object Method.",
+                2: "Donuts Over Money.",
+                3: "Don't Operate Machinery.",
+                4: "Domain Over-ride Methods.",
                 answer: "1"
         },
         {
-                question: "What is an Array?"  
-                1: "A type of laser beam that is used for severe acne treatment."
-                2: "A data structure that contains a group of elements, each identified by at least one array index or key."
-                3: "A container for storing data values."
-                4: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+                question: "What is an Array?",
+                1: "A type of laser beam that is used for severe acne treatment.",
+                2: "A data structure that contains a group of elements, each identified by at least one array index or key.",
+                3: "A container for storing data values.",
+                4: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
                 answer: "2"
         },
         {
-                question: "Function paremeters are enclosed by which of the following?:"  
-                1: "{}"
-                2: "[]"
-                3: "++"
-                4: "()"
+                question: "Function paremeters are enclosed by which of the following?:",
+                1: "{}",
+                2: "[]",
+                3: "++",
+                4: "()",
                 answer: "4"
         },
         {
-                question: "What is a String?"  
-                1: "I piece of fabric, often used to bind things together using knots."
-                2: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
-                3: "A container for storing data values."
-                4: "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
+                question: "What is a String?",
+                1: "I piece of fabric, often used to bind things together using knots.",
+                2: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
+                3: "A container for storing data values.",
+                4: "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
                 answer: "2"
         },
         {
-                question: "Who invented Javascript?"  
-                1: "James Weldon Johnson"
-                2: "Chris Beard"
-                3: "Brendan Eich"
-                4: "Yan Zhu"
+                question: "Who invented Javascript?",  
+                1: "James Weldon Johnson",
+                2: "Chris Beard",
+                3: "Brendan Eich",
+                4: "Yan Zhu",
                 answer: "3"
         },
         
