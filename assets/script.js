@@ -99,6 +99,7 @@ var timeLeft = 90;
 function startQuiz() {
         //hide start container
         document.getElementById("startContainer").classList.add("hide")
+        document.getElementById("initialsContainer").classList.add("unhide")
         //timer starts
         startTimer();
 }
