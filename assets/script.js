@@ -41,31 +41,8 @@ var questions = [
                 
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 question: "What is an Array?",
-=======
-                question: "What is an Array?",  
->>>>>>> workingbranch
-                1: "A type of laser beam that is used for severe acne treatment.",
-                2: "A data structure that contains a group of elements, each identified by at least one array index or key.",
-                3: "A container for storing data values.",
-                4: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
-                answer: "2"
-        },
-        {
-<<<<<<< HEAD
-                question: "Function paremeters are enclosed by which of the following?:",
-=======
-                question: "Function paremeters are enclosed by which of the following?:",  
->>>>>>> workingbranch
-                1: "{}",
-                2: "[]",
-                3: "++",
-                4: "()",
-=======
-                question: "What is an Array?", 
-                choices: [ 
+                choices: [
                         "A type of laser beam that is used for severe acne treatment.",
                         "A data structure that contains a group of elements, each identified by at least one array index or key.",
                         "A container for storing data values.",
@@ -81,28 +58,17 @@ var questions = [
                         "++",
                         "()",
                 ],
->>>>>>> workingbranch
                 answer: "4"
         },
+        
         {
-<<<<<<< HEAD
-                question: "What is a String?",
-=======
-                question: "What is a String?",  
-<<<<<<< HEAD
->>>>>>> workingbranch
-                1: "I piece of fabric, often used to bind things together using knots.",
-                2: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
-                3: "A container for storing data values.",
-                4: "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
-=======
+                question: "What is a string?",
                 choices: [
                         "I piece of fabric, often used to bind things together using knots.",
                         "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
                         "A container for storing data values.",
                         "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
                 ],
->>>>>>> workingbranch
                 answer: "2"
         },
         {
