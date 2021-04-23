@@ -16,9 +16,6 @@ var scoreCard = document.getElementById("scoresContainer");
 //start button
 var startButton = document.getElementById("startButton");
 
-//answerButtons
-// var answerBtns = document.querySelector(".answerBtns");
-
 //submit button
 var submitBtn = document.getElementById("submitBtn");
 //clear records button
@@ -89,31 +86,10 @@ var questions = [
 //currentQuestionIndex
 //keeps track of questions that have been answered
 var currentQuestionIndex = 0;
-//currentQuestionObject
 
 var timeLeft = 90;
 
-//Button clicks
-//answer buttons
-// answerBtns.addEventListener("click", function (event) {
-//         var element = event.target;
-//         if (element.matches(".answerBtns")) {
-//                 console.log("i clicked an answer button");
-//         } nextCard();
-// })
-// document.addEventListener("click", function (event) {
-//         if (event.target.classList.contains("answerBtns"))
-//                 console.log(event.target)
-//         else console.log("NOPE!")
-// })
-
 //start button
-// startButton.addEventListener("click", function (event) {
-//         var element = event.target;
-//         if (element.matches("#startButton")) {
-//                 console.log("i clicked the start button");
-//         } startQuiz();
-// })
 startButton.addEventListener("click", startQuiz)
 
 
@@ -128,6 +104,7 @@ function startQuiz() {
         renderQuestion()
 }
 
+//start timer
 function startTimer() {
         timer.textContent = timeLeft;
         var timeInterval = setInterval(function () {
@@ -152,74 +129,27 @@ function renderQuestion() {
         gameContainer.innerHTML = ""
 
         var q = questions[currentQuestionIndex]
-
+        //creat, build and palce questions in div
         var questionEl = document.createElement("div");
         questionEl.classList.add("question");
         questionEl.textContent = q.question;
 
         gameContainer.appendChild(questionEl)
 
-        // var i = 0;
-        // while (i < q.choices.length) {
-        //         var btn = document.createElement("button")
-        //         btn.classList.add("buttons")
-        //         btn.textContent = q.choices[i]
-        //         btn.addEventListener("click", nextCard)
-        //         gameContainer.appendChild(btn)
-        //         i++;
-        // }
-
-        // for (var i = 0; i < q.choices.length; i++) {
-        //         var btn = document.createElement("button")
-        //         btn.classList.add("buttons")
-        //         btn.textContent = q.choices[i]
-        //         btn.addEventListener("click", nextCard)
-        //         gameContainer.appendChild(btn)
-        // }
-
-        // console.log(q.choices)
-        // // for in:left
-        // for (var i in q.choices) {
-        //         var btn = document.createElement("button")
-        //         btn.classList.add("buttons")
-        //         btn.textContent = q.choices[i]
-        //         btn.addEventListener("click", nextCard)
-        //         gameContainer.appendChild(btn)
-        // }
-
-        // // for of:right
-        // for (var choice of q.choices) {
-        //         var btn = document.createElement("button")
-        //         btn.classList.add("buttons")
-        //         btn.textContent = choice
-        //         btn.addEventListener("click", nextCard)
-        //         gameContainer.appendChild(btn)
-        // }
-
-        q.choices.forEach(function (choice) {
+        for (var i = 0; i < q.choices.length; i++) {
+                //create, build and place buttons with questions
                 var btn = document.createElement("button")
                 btn.classList.add("buttons")
-                btn.textContent = choice
+                btn.textContent = q.choices[i]
                 btn.addEventListener("click", nextCard)
                 gameContainer.appendChild(btn)
-        })
-
-
-        //create question section
-
-        //add content from the question object array
-        //place it in questions card
-
-        //create answer choices as buttons
-        //place in questions card
-
+        }
 }
+
 //displays hidden question/answer cards
 function nextCard(event) {
+        // compares to correct answer in the questionObject
         console.log(event.target.textContent === questions[currentQuestionIndex].answer)
-
-
-
         currentQuestionIndex++
         renderQuestion()
         //for each
@@ -233,71 +163,14 @@ function setScoreKeeper() {
 }
 
 
-//=====================================================================USER INTERACTIONS
+////========   REVISIT===========///////
 
-
-
-
-//Moving to the next question hiding/unhiding the question cards
-// unhide.addEventListener("click", function() {
-//         console.log("Hello")     
-//      })
-//======================================================================INITIALIZATION
-
-//Start Container appears upon page loading
-
-
-// INITIALIZE
-// questionObjects as collection of objects containing a question, an answer, and possible choices
-
-// WHEN I click the start button
-// THEN I hide the game div by adding "hide" class to gamediv
-//  timer displays and starts
-//  set timer to 90 seconds
-//  run setinterval to decrement timer every second
-//  select questionObject from collection of questionObjects
-//  display question and answer choices from questionObject
-
-// When each answer is selected
-// THEN compare to correct answer in the questionObject
 //  if answer is true. flash correct, add point
-//  if wrong flash wrong and subtract 5s from the clock
-
+//time penalty
 // WHEN all questions are answered or the timer reaches 0
 // THEN the game is over
-
 // WHEN the game is over
 // THEN I can save my initials and my score
-
-//Display the highscore
-//give the user the option to go back or clear highscore
-
-// const startContainer = document.getElementById("startContainer")
-
-// startContainer.addEventListener("click", function () {
-//     console.log("hello")
-// })
-
-
-// $("#startContainer").click(function () {
-//     console.log("hello")
-// })
-
-
-
-// function $(element) {
-//     return new $$(element)
-// }
-
-// function $$(element) {
-//     this.isId = element[0] === "#"
-//     this._element = element.split("").slice(1).join("")
-//     this.element = this.isId ? document.getElementById(this._element) : null;
-
-
-//     this.click = function (callback) {
-//         this.element.addEventListener("click", callback)
-//     }
-
-// }
-
+//highscore link needs style
+//highscore card needs to be shown after game
+//local storage for the highscore
