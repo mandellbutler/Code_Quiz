@@ -17,11 +17,9 @@ h1, h2 {
 .hide {
     display: none;
 }
-
-.unhide {
-    display: flex;
+.question {
+    font-size: 2em;
 }
-
 
 .container, section {
     display: flex;

@@ -5,21 +5,22 @@ var highscores = document.getElementById("highscores");
 //countdown timer
 var timer = document.getElementById("timer");
 //question & answer choice cards
-var questionCards = document.getElementById("gameContainer");
+var startContainer = document.getElementById("startContainer")
+var gameContainer = document.getElementById("gameContainer");
 //card that gives the user the ability to enter initials
 var initialsCard = document.getElementById("initialsContainer");
 //highscore card
 var scoreCard = document.getElementById("scoresContainer");
 
-                //Buttons
+//Buttons
 //start button
 var startButton = document.getElementById("startButton");
 
 //answerButtons
-var buttons = document.querySelector(".buttons");
+// var answerBtns = document.querySelector(".answerBtns");
 
 //submit button
-
+var submitBtn = document.getElementById("submitBtn");
 //clear records button
 
 
@@ -30,15 +31,15 @@ var buttons = document.querySelector(".buttons");
 //Questions stored as an object with answers as key/value pairs: 
 var questions = [
         {
-                question: "What does DOM stand for?",  
+                question: "What does DOM stand for?",
                 choices: [
                         "Document Object Method.",
                         "Donuts Over Money.",
                         "Don't Operate Machinery.",
                         "Domain Over-ride Methods.",
                 ],
-                answer: "1"
-                
+                answer: "Document Object Method."
+
         },
         {
                 question: "What is an Array?",
@@ -48,19 +49,19 @@ var questions = [
                         "A container for storing data values.",
                         "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
                 ],
-                answer: "2"
+                answer: "A data structure that contains a group of elements, each identified by at least one array index or key."
         },
         {
-                question: "Function paremeters are enclosed by which of the following?:",
+                question: "Function parameters are enclosed by which of the following?:",
                 choices: [
                         "{}",
                         "[]",
                         "++",
                         "()",
                 ],
-                answer: "4"
+                answer: "()"
         },
-        
+
         {
                 question: "What is a string?",
                 choices: [
@@ -69,21 +70,20 @@ var questions = [
                         "A container for storing data values.",
                         "A data object made up of text and contains, letter, numbers, symbols, punctuation, and even emoji.",
                 ],
-                answer: "2"
+                answer: "A data structure made up of text and contains, letter, numbers, symbols, punctuation, and even emoji."
         },
         {
-                question: "Who invented Javascript?",  
+                question: "Who invented Javascript?",
                 choices: [
                         "James Weldon Johnson",
                         "Chris Beard",
                         "Brendan Eich",
                         "Yan Zhu",
                 ],
-                answer: "3"
+                answer: "Brendan Eich"
         },
-        
+
 ]
-console.log(questions)
 
 
 //currentQuestionIndex
@@ -93,43 +93,120 @@ var currentQuestionIndex = 0;
 
 var timeLeft = 90;
 
-//=====================================================================FUNCTIONS
+//Button clicks
+//answer buttons
+// answerBtns.addEventListener("click", function (event) {
+//         var element = event.target;
+//         if (element.matches(".answerBtns")) {
+//                 console.log("i clicked an answer button");
+//         } nextCard();
+// })
+// document.addEventListener("click", function (event) {
+//         if (event.target.classList.contains("answerBtns"))
+//                 console.log(event.target)
+//         else console.log("NOPE!")
+// })
 
+//start button
+// startButton.addEventListener("click", function (event) {
+//         var element = event.target;
+//         if (element.matches("#startButton")) {
+//                 console.log("i clicked the start button");
+//         } startQuiz();
+// })
+startButton.addEventListener("click", startQuiz)
+
+
+//=====================================================================FUNCTIONS
 //start quiz
 function startQuiz() {
         //hide start container
-        document.getElementById("startContainer").classList.add("hide")
-        document.getElementById("initialsContainer").classList.add("unhide")
+        startContainer.classList.add("hide")
+        gameContainer.classList.remove("hide")
         //timer starts
         startTimer();
+        renderQuestion()
 }
 
 function startTimer() {
         timer.textContent = timeLeft;
-        var timeInterval = setInterval(function() {
+        var timeInterval = setInterval(function () {
                 //subtract 1 from the time left
-            timeLeft--;
-            if (timeLeft > 0) {
-                //update the time in display
-                timer.textContent = timeLeft;
-            } else {
-                clearInterval(timeInterval);
-                //timer reaches zero
-                timer.textContent = 0;
-                timeLeft = 90;
-                //stop the timer
-               //stop the quiz
-            }
+                timeLeft--;
+                if (timeLeft > 0) {
+                        //update the time in display
+                        timer.textContent = timeLeft;
+                } else {
+                        clearInterval(timeInterval);
+                        //timer reaches zero
+                        timer.textContent = 0;
+                        timeLeft = 90;
+                        //stop the timer
+                        //stop the quiz
+                }
         }, 1000);
 }
 
-// //render the questions/answers to the card
-function renderQuestions(index) {
-        //clear off the start card
-        for (i = 0; i < questions.length ; i++)
-        console.log(renderquestions)
+// // //render the questions/answers to the card
+function renderQuestion() {
+        gameContainer.innerHTML = ""
+
+        var q = questions[currentQuestionIndex]
+
+        var questionEl = document.createElement("div");
+        questionEl.classList.add("question");
+        questionEl.textContent = q.question;
+
+        gameContainer.appendChild(questionEl)
+
+        // var i = 0;
+        // while (i < q.choices.length) {
+        //         var btn = document.createElement("button")
+        //         btn.classList.add("buttons")
+        //         btn.textContent = q.choices[i]
+        //         btn.addEventListener("click", nextCard)
+        //         gameContainer.appendChild(btn)
+        //         i++;
+        // }
+
+        // for (var i = 0; i < q.choices.length; i++) {
+        //         var btn = document.createElement("button")
+        //         btn.classList.add("buttons")
+        //         btn.textContent = q.choices[i]
+        //         btn.addEventListener("click", nextCard)
+        //         gameContainer.appendChild(btn)
+        // }
+
+        // console.log(q.choices)
+        // // for in:left
+        // for (var i in q.choices) {
+        //         var btn = document.createElement("button")
+        //         btn.classList.add("buttons")
+        //         btn.textContent = q.choices[i]
+        //         btn.addEventListener("click", nextCard)
+        //         gameContainer.appendChild(btn)
+        // }
+
+        // // for of:right
+        // for (var choice of q.choices) {
+        //         var btn = document.createElement("button")
+        //         btn.classList.add("buttons")
+        //         btn.textContent = choice
+        //         btn.addEventListener("click", nextCard)
+        //         gameContainer.appendChild(btn)
+        // }
+
+        q.choices.forEach(function (choice) {
+                var btn = document.createElement("button")
+                btn.classList.add("buttons")
+                btn.textContent = choice
+                btn.addEventListener("click", nextCard)
+                gameContainer.appendChild(btn)
+        })
+
+
         //create question section
-        
+
         //add content from the question object array
         //place it in questions card
 
@@ -138,32 +215,28 @@ function renderQuestions(index) {
 
 }
 //displays hidden question/answer cards
+function nextCard(event) {
+        console.log(event.target.textContent === questions[currentQuestionIndex].answer)
 
+
+
+        currentQuestionIndex++
+        renderQuestion()
+        //for each
+        //when answerBtn is clicked
+        //current card .add("hide")
+        //next card .add("unhide")
+}
 //score card function
 function setScoreKeeper() {
         countEl.textContent = count;
-      }
+}
 
 
 //=====================================================================USER INTERACTIONS
 
 
-//Button clicks
-//answer buttons
-// buttons.addEventListener("click", function(event) {
-//         var element = event.target;
-//         if (element.matches(".buttons")) {
-//                 console.log("i clicked a button");
-//         }
-// })
 
-//start button
-startButton.addEventListener("click", function(event) {
-        var element = event.target;
-        if (element.matches("#startButton")) {
-                console.log("i clicked the start button");
-        }startQuiz();
-})
 
 //Moving to the next question hiding/unhiding the question cards
 // unhide.addEventListener("click", function() {
